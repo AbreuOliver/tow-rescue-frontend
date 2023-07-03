@@ -1,19 +1,23 @@
 <script>
-	import { Button } from 'carbon-components-svelte';
 	import Header from '../Components/Header.svelte';
 </script>
 
-<div class="flex flex-col items-start min-w-[100vw] h-[100vh]" style="border: 1px solid green;">
-	<Header />
-
-	<div class="flex flex-col items-start min-w-[100vw] px-4">
-		<slot />
-	</div>
-
-	<div class="flex flex-col justify-center w-full px-4 h-full max-h-[40vh]" style="border: 1px solid purple;">
-		<Button class="bg-blue-500 hover:bg-blue-600 h-14 text-white font-bold w-full mb-4 text-lg"
-			>Request Truck</Button
-		>
-		<Button kind="tertiary" class="w-full h-14 text-lg">Learn More</Button>
+<div class="flex flex-col w-[100vw] items-center overflow-hidden">
+	<div class="h-full max-w-[600px] border-2 image-container">
+		<Header />
+		<div class="flex flex-col items-start min-w-[100vw] h-full px-4">
+			<slot />
+		</div>
 	</div>
 </div>
+
+<style>
+	.image-container {
+		background-image: url('../Images/background.jpg');
+		background-size: cover;
+		background-position: center;
+		height: 100vh;
+		opacity: 0.9;
+		overflow-y: none;
+	}
+</style>

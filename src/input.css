@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+	min-width: 100vw;
+	margin: none;
+}
+
 @font-face {
 	font-family: 'Morequiet';
 	src: url('../src/fonts/Morequiet.woff2') format('woff2');
